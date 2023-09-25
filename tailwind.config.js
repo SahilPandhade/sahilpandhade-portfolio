@@ -4,8 +4,10 @@ module.exports = {
   mode: "jit",
   theme: {
     extend: {
-      fontFamily:{
-        croissant: ['Croissant One', 'cursive']
+      fontFamily: {
+        croissant: ['Croissant One', 'cursive'],
+        amatic: ['Amatic SC']
+
       },
       colors: {
         primary: "#050816",
@@ -24,7 +26,7 @@ module.exports = {
       backgroundImage: {
         "hero-pattern": "url('/src/assets/herobg.png')",
       },
-      
+
     },
   },
   plugins: [],

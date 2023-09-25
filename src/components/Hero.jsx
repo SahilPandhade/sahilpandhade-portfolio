@@ -23,33 +23,47 @@ const Hero = () => {
         // Add fade-in class to initiate fade in animation
         greetingElement.classList.add('animate-fade-in');
       }, 5000);
-    }, 2000);
+    }, 4000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
     <section className='relative w-full h-screen mx-auto  '>
-      <div className={`${st.paddingX} absolute inset-0 top-[240px] max-w-2xl xs:justify-center mx-auto flex flex-row items-start gap-5 `}>
-        <div className={`flex flex-col  p-10 w-full  ml-10`}>
-          <span className={`${st.heroSubText} text-[#F8F8F9]`}><Typewriter 
+      <div className={`${st.paddingX} absolute inset-0 top-[150px] max-w-4xl  mx-auto flex flex-row items-start gap-5 `}>
+        <div className={`flex flex-col p-12 w-full `}>
+          {/* <span className={` text-[42px] text-[#F8F8F9] flex justify-center`}><Typewriter
             options={
               {
-                delay:120,
-                deleteSpeed:90,
-                strings:greetings,
-                autoStart:true,
-                loop:true
+                delay: 120,
+                deleteSpeed: 90,
+                strings: greetings,
+                autoStart: true,
+                loop: true
               }
-            }/></span>
-          {/* <span className={`${st.heroSubText} opacity-0 greeting-text animate-fade-in `}>{greetings[index]}</span> */}
-          <span className={`${st.heroHeadText} flex items-center gap-10 w-full text-[#F8F8F9] font-croissant`}>
-            I'm Sahil
+            } /></span> */}
+          <span className={`${st.heroSubText} text-[#F8F8F9] flex justify-center opacity-0 greeting-text animate-fade-in `}>{greetings[index]}</span>
+          <span className={`${st.heroHeadText} flex items-center justify-center w-full text-[#F8F8F9] font-amatic`}>
+            I'm Sahil Pandhade
           </span>
           <div className={`${st.heroSubText} flex gap-2 mt-10 w-full text-[#F8F8F9]`}>
-            <p className=''>I'm a </p>
+            {/* <p className=''>I'm a </p> */}
             <span >
               <Typewriter
+                onInit={(typewriter) => {
+                  typewriter
+                    .typeString("Welcome to my portfolio, a window into my education,experience,work and much more")
+                     .start().changeDeleteSpeed(5)
+                }
+                // options={
+                //   {
+                //     strings: ['Welcome to my portfolio, a window into my education,experience,work and much more'],
+                //     autoStart: true,
+                //     loop: false,
+                //     changeDelay: 10,
+                //   }
+                } />
+              {/* <Typewriter
                 options={{
                   delay: 90,
                   deleteSpeed: 50,
@@ -57,7 +71,7 @@ const Hero = () => {
                   autoStart: true,
                   loop: true,
                 }}
-              />
+              /> */}
             </span>
           </div>
         </div>
