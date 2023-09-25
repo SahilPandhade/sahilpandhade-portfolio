@@ -42,36 +42,20 @@ const Hero = () => {
                 loop: true
               }
             } /></span> */}
-          <span className={`${st.heroSubText} text-[#F8F8F9] flex justify-center opacity-0 greeting-text animate-fade-in `}>{greetings[index]}</span>
+          <span className={`${st.heroGreeting} text-[#F8F8F9] flex justify-center opacity-0 greeting-text animate-fade-in `}>{greetings[index]}</span>
           <span className={`${st.heroHeadText} flex items-center justify-center w-full text-[#F8F8F9] font-amatic`}>
             I'm Sahil Pandhade
           </span>
-          <div className={`${st.heroSubText} flex gap-2 mt-10 w-full text-[#F8F8F9]`}>
+          <div className={`${st.heroSubText} flex gap-2 mt-8 w-full text-[#F8F8F9]`}>
             {/* <p className=''>I'm a </p> */}
             <span >
               <Typewriter
                 onInit={(typewriter) => {
                   typewriter
-                    .typeString("Welcome to my portfolio, a window into my education,experience,work and much more")
-                     .start().changeDeleteSpeed(5)
+                    .typeString(`Welcome to my portfolio, a window into my education,experience,work and much more ${`\u2728`}`)
+                     .start().changeDelay(1)
                 }
-                // options={
-                //   {
-                //     strings: ['Welcome to my portfolio, a window into my education,experience,work and much more'],
-                //     autoStart: true,
-                //     loop: false,
-                //     changeDelay: 10,
-                //   }
                 } />
-              {/* <Typewriter
-                options={{
-                  delay: 90,
-                  deleteSpeed: 50,
-                  strings: [' Full Stack Developer', ' Computer Engineer', ' Tech enthusiast'],
-                  autoStart: true,
-                  loop: true,
-                }}
-              /> */}
             </span>
           </div>
         </div>
