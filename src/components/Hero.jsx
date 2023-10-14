@@ -5,57 +5,52 @@ import styles from '../index.css'
 import { ComputersCanvas } from './canvas'
 import Typewriter from 'typewriter-effect';
 const Hero = () => {
-  const greetings = ["Hello", "Hola", "Bonjour", "Ciao", "नमस्ते"]
-  const [index, setIndex] = useState(0);
+  // const greetings = ["Hello", "Hola", "Bonjour", "Ciao", "नमस्ते"]
+  // const [index, setIndex] = useState(0);
 
-  React.useEffect(() => {
-    const interval = setInterval(() => {
-      // Add fade-out class to initiate fade out animation
-      const greetingElement = document.querySelector('.greeting-text');
-      greetingElement.classList.add('animate-fade-out');
+  // React.useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     const greetingElement = document.querySelector('.greeting-text');
+  //     greetingElement.classList.add('animate-fade-out');
 
-      setTimeout(() => {
-        setIndex((prevIndex) => (prevIndex + 1) % greetings.length);
+  //     setTimeout(() => {
+  //       setIndex((prevIndex) => (prevIndex + 1) % greetings.length);
+  //       greetingElement.classList.remove('animate-fade-out');
+  //       greetingElement.classList.add('animate-fade-in');
+  //     }, 5000);
+  //   }, 4000);
 
-        // Remove fade-out class to reset the animation
-        greetingElement.classList.remove('animate-fade-out');
-
-        // Add fade-in class to initiate fade in animation
-        greetingElement.classList.add('animate-fade-in');
-      }, 5000);
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   return (
-    <section className='relative w-full h-screen mx-auto  '>
+    <section className='relative w-full h-screen mx-auto'>
       <div className={`${st.paddingX} absolute inset-0 top-[150px] max-w-4xl  mx-auto flex flex-row items-start gap-5 `}>
         <div className={`flex flex-col p-12 w-full `}>
-          {/* <span className={` text-[42px] text-[#F8F8F9] flex justify-center`}><Typewriter
-            options={
-              {
-                delay: 120,
-                deleteSpeed: 90,
-                strings: greetings,
-                autoStart: true,
-                loop: true
-              }
-            } /></span> */}
-          <span className={`${st.heroGreeting} text-[#F8F8F9] flex justify-center opacity-0 greeting-text animate-fade-in `}>{greetings[index]}</span>
-          <span className={`${st.heroHeadText} flex items-center justify-center w-full text-[#F8F8F9] font-amatic`}>
-            I'm Sahil Pandhade
+          {/* <span className={`${st.heroGreeting} text-[#F8F8F9] flex justify-center opacity-0 greeting-text animate-fade-in `}>
+             {greetings[index]}
+            Hi
+          </span> */}
+          <span className={`${st.heroHeadText} flex items-center justify-center w-full text-[#F8F8F9] font-amatic  animate-fade-in `}>
+            Hi, I'm Sahil Pandhade
           </span>
-          <div className={`${st.heroSubText} flex gap-2 mt-8 w-full text-[#F8F8F9]`}>
-            {/* <p className=''>I'm a </p> */}
+          <div className={`${st.heroSubText} gap-2 mt-8 w-full text-[#F8F8F9]`}>
             <span >
-              <Typewriter
+              {/* <Typewriter
                 onInit={(typewriter) => {
                   typewriter
                     .typeString(`Welcome to my portfolio, a window into my education,experience,work and much more ${`\u2728`}`)
                      .start().changeDelay(1)
                 }
-                } />
+                } /> */}
+                Welcome to my portfolio, a window into my
+              <Typewriter
+                options={{
+                  strings: ['education', 'experience',`work ${`\u2728`}`],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
             </span>
           </div>
         </div>
