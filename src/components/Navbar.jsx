@@ -1,7 +1,7 @@
 import { React, useEffect, useState } from 'react'
 import { navLinks } from '../constants'
 import { Link } from 'react-router-dom';
-import { logo, menu, close } from '../assets'
+import { logo, menu, close, Sahil_Pandhade_Resume } from '../assets'
 import { styles } from '../styles';
 import { list } from 'postcss';
 const Navbar = () => {
@@ -14,7 +14,12 @@ const Navbar = () => {
           <img src={logo} alt='logo' className='w-12 h-12 object-contain rounded-3xl mr-5'></img>
           <p className='text-white text-[14px] font-bold cursor-pointer'>Sahil Pandhade</p>
         </Link>
-        <ul className='list-none hidden sm:flex flex-row gap-10'>
+        <ul className='list-none hidden sm:flex flex-row items-center gap-10'>
+          <a href={Sahil_Pandhade_Resume} download={"Hire_Sahil_Pandhade"} target='_blank' rel='noopener noreferrer'>
+            <button type='submit' className='bg-tertiary py-3 px-8 outline-none w-fit text-white 
+              font-bold shadow-md shadow-primary rounded-xl'>
+              Download CV
+            </button></a>
           {
             navLinks.map((link) => (
               <li key={link.id}
@@ -30,6 +35,11 @@ const Navbar = () => {
           <img src={menu} alt='menu' className='w-[28px] h-[28px] object-contain cursor-pointer' onClick={() => { setToggle(!toggle) }}></img>
           <div className={`${!toggle ? 'hidden' : 'flex'} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}>
             <ul className='list-none flex justify-end items-start flex-col gap-4'>
+              <li className='text-white font-poppins font-medium cursor-pointer text-[16px]'>
+                <a href={Sahil_Pandhade_Resume} download={"Hire_Sahil_Pandhade"} target='_blank' rel='noopener noreferrer'>
+                  Download CV
+                </a>
+              </li>
               {
                 navLinks.map((link) => (
                   <li key={link.id}

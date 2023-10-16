@@ -25,24 +25,17 @@ const Hero = () => {
 
   return (
     <section className='relative w-full h-screen mx-auto'>
-      <div className={`${st.paddingX} absolute inset-0 top-[150px] max-w-4xl  mx-auto flex flex-row items-start gap-5 `}>
+      <div className={`${st.paddingX}  absolute inset-0 max-w-4xl  mx-auto flex items-center gap-5 `}>
         <div className={`flex flex-col p-12 w-full `}>
           {/* <span className={`${st.heroGreeting} text-[#F8F8F9] flex justify-center opacity-0 greeting-text animate-fade-in `}>
              {greetings[index]}
             Hi
           </span> */}
-          <span className={`${st.heroHeadText} flex items-center justify-center w-full text-[#F8F8F9] font-amatic  animate-fade-in `}>
+          <div className={`${st.heroHeadText} flex items-center justify-center w-full text-[#F8F8F9]  animate-fade-in `}>
             Hi, I'm Sahil Pandhade
-          </span>
-          <div className={`${st.heroSubText} gap-2 mt-8 w-full text-[#F8F8F9]`}>
-            <span >
-              {/* <Typewriter
-                onInit={(typewriter) => {
-                  typewriter
-                    .typeString(`Welcome to my portfolio, a window into my education,experience,work and much more ${`\u2728`}`)
-                     .start().changeDelay(1)
-                }
-                } /> */}
+          </div>
+          <div className={`${st.heroSubText} gap-2 mt-8 w-full flex justify-center text-[#F8F8F9]`}>
+            <span className=''>
                 Welcome to my portfolio, a window into my
               <Typewriter
                 options={{
