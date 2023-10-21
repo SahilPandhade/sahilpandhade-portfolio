@@ -42,6 +42,7 @@ const Hero = () => {
                   strings: ['education', 'experience',`work ${`\u2728`}`],
                   autoStart: true,
                   loop: true,
+                  delay:100
                 }}
               />
             </span>

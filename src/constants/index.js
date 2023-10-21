@@ -17,7 +17,8 @@ import {
     ias,
     blog,
     conway,
-    forecasting
+    forecasting,
+    taskql
   } from "../assets";
   
   export const navLinks = [
@@ -253,6 +254,31 @@ import {
       image: forecasting,
       source_code_link: "https://not-another-weather-app.onrender.com/",
     },
+    {
+      name: "TaskQL",
+      description:
+        "Super-charge your productivity with TaskQL- a Task Management web application built with MERN Stack along with GraphQL",
+      tags: [
+        {
+          name: "React",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Typescript",
+          color: "green-text-gradient",
+        },
+        {
+          name: "GraphQL",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "MERN",
+          color: "orange-text-gradient",
+        },
+      ],
+      image: taskql,
+      source_code_link: "https://taskql-frontend.onrender.com",
+    }
   ];
   
   export { services, technologies, experiences, testimonials, projects };
