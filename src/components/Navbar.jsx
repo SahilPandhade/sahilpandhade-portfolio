@@ -15,11 +15,10 @@ const Navbar = () => {
           <p className='text-white text-[14px] font-bold cursor-pointer'>Sahil Pandhade</p>
         </Link>
         <ul className='list-none hidden sm:flex flex-row items-center gap-10'>
-          <a href={Sahil_Pandhade_Resume} download={"Hire_Sahil_Pandhade"} target='_blank' rel='noopener noreferrer'>
-            <button type='submit' className='bg-tertiary py-3 px-8 outline-none w-fit text-white 
-              font-bold shadow-md shadow-primary rounded-xl'>
-              Download CV
-            </button></a>
+            <a href={Sahil_Pandhade_Resume} download={"Hire_Sahil_Pandhade"} target='_blank' rel='noopener noreferrer'
+             className="btn-flip bg-tertiary px-4 rounded-md opacity-100 outline-none text-white
+              leading-10 relative text-center tracking-wider inline-block no-underline font-open-sans uppercase" 
+             data-back="Download CV" data-front="Know more"></a>
           {
             navLinks.map((link) => (
               <li key={link.id}
