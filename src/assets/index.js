@@ -32,7 +32,7 @@ import tripguide from "./tripguide.png";
 import blog from "./MERN_Blog.png"
 import conway from "./conways_rec.gif"
 import forecasting from "./forecasting.gif"
-import Sahil_Pandhade_Resume from "../assets/Sahil_Rajesh_Pandhade_Resume_2.pdf"
+import Sahil_Pandhade_Resume from "../assets/Sahil_Rajesh_Pandhade_Resume_2 Updated.pdf"
 import taskql from "./taskql.png"
 export {
   logo,
