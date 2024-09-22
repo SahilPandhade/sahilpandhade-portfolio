@@ -21,11 +21,14 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import gcp from "./tech/gcp.png";
+import bigquery from "./tech/bigquery.webp";
+
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+import dista from "./company/Dista.webp";
 import ias from "./company/ias.png"
 import viit from './company/viit.png'
 import tripguide from "./tripguide.png";
@@ -56,13 +59,15 @@ export {
   redux,
   tailwind,
   typescript,
+  gcp,
+  bigquery,
   threejs,
   meta,
   shopify,
   starbucks,
   viit,
   ias,
-  tesla,
+  dista,
   tripguide,
   blog,
   conway,
